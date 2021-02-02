@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Departures</title>
+</head>
+<body>
+  {% if departure == "nsk" %}
+    <h1>Туры по направлению Новосибирск:</h1>
+  {% endif %}
+  {% if departure == "ekb" %}
+    <h1>Туры по направлению Екатеринбург:</h1>
+  {% endif %}
+  {% if departure == "msk" %}
+    <h1>Туры по направлению Москва:</h1>
+  {% endif %}
+  {% if departure == "spb" %}
+    <h1>Туры по направлению Санкт-Петербург:</h1>
+  {% endif %}
+  {% if departure == "kazan" %}
+    <h1>Туры по направлению Казань:</h1>
+  {% endif %}
+
+  {% for key, value in tours.items() %}
+    {% if tours[key]["departure"] == departure %}
+  <h4>{{tours[key].country}} <a href="/tours/3/">{{tours[key]["title"]}}</a> {{tours[key].price}} {{tours[key].stars}}*</h4>
+    {% endif %}
+  {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
