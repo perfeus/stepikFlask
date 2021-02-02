@@ -1,1 +1,1 @@
-Lessons on learing platform Stepik
+Lessons on learing platform Stepik (MOOC)
